@@ -1,0 +1,7 @@
+Lab class 9:00 Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G3.01
+Class list:
+Scarlett, student ID: 33447890, credits: 20
+Pia, student ID: 33446789, credits: 20
+Roy, student ID: 33789012, credits: 20
+Number of students: 3
