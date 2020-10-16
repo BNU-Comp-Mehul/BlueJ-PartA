@@ -5,7 +5,7 @@ import java.util.Date;
  * date and time purchased
  * 
  * @author Mehul Patel
- * @version 1.0 16.10.2020
+ * @version 0.1 16.10.2020
  */
 public class Ticket
 {
