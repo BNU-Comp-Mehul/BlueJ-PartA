@@ -1,0 +1,76 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.printAllTickets();
+The following three destinations are available
+Ticket toAylesbury 220penceThu Oct 22 22:51:24 BST 2020
+Ticket toAmersham 300penceThu Oct 22 22:51:24 BST 2020
+Ticket toHigh Wycombe 330penceThu Oct 22 22:51:24 BST 2020
+Please select your ticket destination > 
+ticketMa1.getBalance()
+    returned int 0
+ticketMa1.insert10pCoin();
+ticketMa1.insert20pCoin();
+ticketMa1.insert100Coin();
+ticketMa1.insert200Coin();
+ticketMa1.getBalance()
+    returned int 330
+ticketMa1.selectTicket("Aylesbury");
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+Ticket toAylesbury 220penceThu Oct 22 22:51:24 BST 2020
+##################
+
+ticketMa1.getBalance()
+    returned int 110
+ticketMa1.selectTicket("Amersham");
+ticketMa1.printTicket();
+You must insert at least: 190 more pence.
+ticketMa1.insertMoney(190);
+ticketMa1.getBalance()
+    returned int 300
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+Ticket toAmersham 300penceThu Oct 22 22:51:24 BST 2020
+##################
+
+ticketMa1.getBalance()
+    returned int 0
+ticketMa1.insertMoney(450);
+ticketMa1.getBalance()
+    returned int 450
+ticketMa1.selectTicket("highwycombe");
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+Ticket toHigh Wycombe 330penceThu Oct 22 22:51:24 BST 2020
+##################
+
+ticketMa1.getBalance()
+    returned int 120
+ticketMa1.insertMoney(5000);
+ticketMa1.getBalance()
+    returned int 5120
+ticketMa1.selectTicket("Aylesbury");
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+Ticket toAylesbury 220penceThu Oct 22 22:51:24 BST 2020
+##################
+
+ticketMa1.selectTicket("Amersham");
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+Ticket toAmersham 300penceThu Oct 22 22:51:24 BST 2020
+##################
+
+ticketMa1.selectTicket("highwycombe");
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+Ticket toHigh Wycombe 330penceThu Oct 22 22:51:24 BST 2020
+##################
+
+ticketMa1.refundBalance()
+    returned int 4270
