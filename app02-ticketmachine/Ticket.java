@@ -5,12 +5,11 @@ import java.util.Date;
  * date and time purchased
  * 
  * @author Mehul Patel
- * @version 0.1 16.10.2020
+ * Modified on 22.10.2020
  */
 public class Ticket
 {
     //Fields, attributes, variables 
-    
     private String destination; 
     
     //This is the price of the ticket in pence
@@ -44,7 +43,7 @@ public class Ticket
     {
        System.out.print("Ticket to" + destination);
        System.out.print(" " + price + "pence");
-       System.out.print(dateTime);
+       System.out.println(dateTime);
     }
     
     
