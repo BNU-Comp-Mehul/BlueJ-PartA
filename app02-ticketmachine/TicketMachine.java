@@ -46,9 +46,10 @@ public class TicketMachine
      * Return The amount of money already inserted for the
      * next ticket.
      */
-    public int getBalance()
+    public void printBalance(int amount)
     {
-        return balance;
+        System.out.println("amount inserted = " + amount);
+        System.out.println("current balance = " + balance);
     }
 
     /**
@@ -145,22 +146,28 @@ public class TicketMachine
     public void insert20pCoin()
     {
         balance = balance + 20;
+        printBalance(20);
     }
     
     public void insert10pCoin()
     {
         balance = balance + 10;
+        printBalance(10);
     }
     
     public void insert100Coin()
     {
         balance = balance + 100;
+        printBalance(100);
     }
     
     public void insert200Coin()
     {
         balance = balance + 200;
+        printBalance(200);
+        
     }
+  
     
     
 }
