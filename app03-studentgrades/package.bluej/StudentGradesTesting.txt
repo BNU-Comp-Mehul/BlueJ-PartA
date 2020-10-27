@@ -1,0 +1,24 @@
+Student student1 = new Student("Pia", "23499012");
+Course course1 = new Course("G400", "Computing");
+course1.setMark(50, 1);
+course1.setMark(60, 2);
+course1.setMark(70, 3);
+course1.setMark(80, 4);
+course1.calculateFinalMark();
+course1.print();
+Course G400 - Computing
+Module: CO452 Programming ConceptsMark = 50
+Module: CO453 Application ProgrammingMark = 60
+Module: CO455 User ExperienceMark = 70
+Module: CO456 Website DevelopmentMark = 80
+Final Mark = 65
+Final Grade = null
+course1.convertMark(65);
+course1.print();
+Course G400 - Computing
+Module: CO452 Programming ConceptsMark = 50
+Module: CO453 Application ProgrammingMark = 60
+Module: CO455 User ExperienceMark = 70
+Module: CO456 Website DevelopmentMark = 80
+Final Mark = 65
+Final Grade = B
