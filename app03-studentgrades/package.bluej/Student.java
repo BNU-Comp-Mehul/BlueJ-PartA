@@ -12,13 +12,13 @@ import java.util.*;
  public class Student
  {
     private String name;
-    
+
     private String id;
-    
+
     private int credits;
-    
+
     private Course course;
-    
+
     /**
      * Student with a given name and ID number.
      */
@@ -78,7 +78,7 @@ import java.util.*;
     {
         return name.substring(0,4) + id.substring(0,3);
     }
-    
+
     /**
      * Prints the student's name and ID number to the output terminal.
      */
@@ -86,7 +86,7 @@ import java.util.*;
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
     }
-    
+
     /**
      * Student can enrol onto course.
      */
