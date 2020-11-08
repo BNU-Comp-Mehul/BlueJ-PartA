@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 
 /**
- * Manage the stock in a business.
- * The stock is described by zero or more Products.
+ * Manages the stock. 
+ * The stock is described by zero or more products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Author Mehul Patel  
+ * Modified on 05.11.2020
  */
 public class StockManager
 {
-    // A list of the products.
+    //Provides a list of the products.
     private ArrayList<Product> stock;
 
     /**
-     * Initialise the stock manager.
+     * Initialises the stock manager.
      */
     public StockManager()
     {
@@ -21,8 +21,7 @@ public class StockManager
     }
 
     /**
-     * Add a product to the list.
-     * @param item The item to be added.
+     * Adds a product to list. 
      */
     public void addProduct(Product item)
     {
@@ -30,31 +29,78 @@ public class StockManager
     }
     
     /**
-     * Receive a delivery of a particular product.
-     * Increase the quantity of the product by the given amount.
-     * @param id The ID of the product.
-     * @param amount The amount to increase the quantity by.
+     * Receives delivery of a product and increases product quantities.
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct(int id, int amount)
     {
+        Product product = findProduct(id);
+        
+        System.out.println("Deliver Product" + id);
+        product.increaseQuantity(amount);
+        printProduct(id);
+        
+        if(product != null)
+            product.increaseQuantity(amount);
+        
+        else
+            System.out.println("Invalid Product ID = " + id);
     }
     
     /**
-     * Try to find a product in the stock with the given id.
-     * @return The identified product, or null if there is none
-     *         with a matching ID.
+     * Selling products and showing product status.
+     */
+    public void sellProduct(int id, int quantity)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            if(quantity > product.getQuantity())
+                quantity = product.getQuantity();
+                
+            printProduct(id);
+            
+            for(int count = 0; count <= quantity; count++)
+            {
+                product.sellOne();
+            }
+
+            printProduct(id);
+        }
+    }
+    
+    /**
+     * Finding a product and its ID. 
      */
     public Product findProduct(int id)
     {
+        for(Product product : stock)
+        {
+            if(product.getID() == id)
+            {
+               return product; 
+            }
+        }
+        
         return null;
     }
     
     /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
-     * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
+     * Searching for products based on part of their name.
+     */
+    public void searchProducts(String name)
+    {
+        for(Product product : stock)
+        {
+            if(product.getName().contains(name))
+            {
+                System.out.println(product);
+            }
+        }
+    }
+    
+    /**
+     * Checking for a product in stock. 
      */
     public int numberInStock(int id)
     {
@@ -62,9 +108,39 @@ public class StockManager
     }
 
     /**
-     * Print details of all the products.
+     * Printing details of product once found. 
      */
-    public void printProductDetails()
+    public void printProduct(int id)
     {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            System.out.println(product.toString());
+        }
+    }
+    
+    /**
+     * Printing details of each product in stock. 
+     */
+    public void printAllProducts()
+    {
+        printHeading();
+        
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
+    }
+    
+    /**
+     * Printing of heading. 
+     */
+    public void printHeading()
+    {
+        System.out.println("========================");
+        System.out.println("Mehul Patel's Stock List");
+        System.out.println("========================");
+        System.out.println();
     }
 }

@@ -1,23 +1,20 @@
 /**
- * Model some details of a product sold by a company.
+ * Details of products. 
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * Author Mehul Patel
+ * Modified on 05.11.2020
  */
 public class Product
 {
-    // An identifying number for this product.
+    //Identifying a number for each product.
     private int id;
-    // The name of this product.
+    //Used for naming a product.
     private String name;
-    // The quantity of this product in stock.
+    //Used for searching the quantity of a product. 
     private int quantity;
 
     /**
-     * Constructor for objects of class Product.
-     * The initial stock quantity is zero.
-     * @param id The product's identifying number.
-     * @param name The product's name.
+     * Constructor for objects of class. 
      */
     public Product(int id, String name)
     {
@@ -27,7 +24,7 @@ public class Product
     }
 
     /**
-     * @return The product's id.
+     * Returns the ID of a product. 
      */
     public int getID()
     {
@@ -35,7 +32,7 @@ public class Product
     }
 
     /**
-     * @return The product's name.
+     * Returns the name of a product. 
      */
     public String getName()
     {
@@ -43,7 +40,7 @@ public class Product
     }
 
     /**
-     * @return The quantity in stock.
+     * Returns the quantity of a product.
      */
     public int getQuantity()
     {
@@ -51,35 +48,32 @@ public class Product
     }
 
     /**
-     * @return The id, name and quantity in stock.
+     * Returns the name, ID and quantity in stock. 
      */
     public String toString()
     {
         return id + ": " +  name + " stock level: " + quantity;
     }
-
+    
     /**
-     * Restock with the given amount of this product.
-     * The current quantity is incremented by the given amount.
-     * @param amount The number of new items added to the stock.
-     *               This must be greater than zero.
+     * Increases the quantity of a product. 
      */
     public void increaseQuantity(int amount)
     {
-        if(amount > 0) 
+        if(amount > 0)
         {
             quantity += amount;
         }
-        else 
+        
+        else
         {
-            System.out.println("Attempt to restock " + name +
-                               " with a non-positive amount: " + amount);
+            System.out.println("Attempt to restock" + name 
+                               + "with a non-positive amount:" + amount);
         }
     }
 
     /**
-     * Sell one of these products.
-     * An error is reported if there appears to be no stock.
+     * Sell a product or an error will appear if none are in stock. 
      */
     public void sellOne()
     {
@@ -87,6 +81,7 @@ public class Product
         {
             quantity--;
         }
+        
         else 
         {
             System.out.println(
