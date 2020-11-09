@@ -1,0 +1,87 @@
+StockManager stockManager = new StockManager();
+StockDemo Demo = new StockDemo(stockManager);
+stockManager.printAllProducts();
+========================
+Mehul Patel's Stock List
+========================
+
+101: Bluetooth headphones stock level: 0
+102: Bluetooth speaker stock level: 0
+103: Smartwatch stock level: 0
+104: Smartphone stock level: 0
+105: Tablet stock level: 0
+106: Television stock level: 0
+107: Camera stock level: 0
+108: Printer stock level: 0
+109: MP4 player stock level: 0
+110: Games console stock level: 0
+stockManager.searchProducts("Bluetooth");
+101: Bluetooth headphones stock level: 0
+102: Bluetooth speaker stock level: 0
+stockManager.searchProducts("Smart");
+103: Smartwatch stock level: 0
+104: Smartphone stock level: 0
+stockManager.deliverProduct(101, 2);
+Deliver Product101
+101: Bluetooth headphones stock level: 2
+stockManager.sellProduct(101, 1);
+101: Bluetooth headphones stock level: 4
+101: Bluetooth headphones stock level: 2
+stockManager.deliverProduct(102, 5);
+Deliver Product102
+102: Bluetooth speaker stock level: 5
+stockManager.sellProduct(102, 3);
+102: Bluetooth speaker stock level: 10
+102: Bluetooth speaker stock level: 6
+stockManager.deliverProduct(103, 6);
+Deliver Product103
+103: Smartwatch stock level: 6
+stockManager.sellProduct(103, 1);
+103: Smartwatch stock level: 12
+103: Smartwatch stock level: 10
+stockManager.deliverProduct(104, 7);
+Deliver Product104
+104: Smartphone stock level: 7
+stockManager.sellProduct(104, 5);
+104: Smartphone stock level: 14
+104: Smartphone stock level: 8
+stockManager.deliverProduct(105, 8);
+Deliver Product105
+105: Tablet stock level: 8
+stockManager.sellProduct(105, 6);
+105: Tablet stock level: 16
+105: Tablet stock level: 9
+stockManager.deliverProduct(106, 9);
+Deliver Product106
+106: Television stock level: 9
+stockManager.sellProduct(106, 3);
+106: Television stock level: 18
+106: Television stock level: 14
+stockManager.deliverProduct(107, 10);
+Deliver Product107
+107: Camera stock level: 10
+stockManager.sellProduct(107, 7);
+107: Camera stock level: 20
+107: Camera stock level: 12
+stockManager.deliverProduct(108, 11);
+Deliver Product108
+108: Printer stock level: 11
+stockManager.sellProduct(108, 9);
+108: Printer stock level: 22
+108: Printer stock level: 12
+stockManager.deliverProduct(109, 12);
+Deliver Product109
+109: MP4 player stock level: 12
+stockManager.sellProduct(109, 6);
+109: MP4 player stock level: 24
+109: MP4 player stock level: 17
+stockManager.sellProduct(110, 13);
+110: Games console stock level: 0
+Attempt to sell an out of stock item: Games console
+110: Games console stock level: 0
+stockManager.deliverProduct(110, 14);
+Deliver Product110
+110: Games console stock level: 14
+stockManager.sellProduct(110, 11);
+110: Games console stock level: 28
+110: Games console stock level: 16
